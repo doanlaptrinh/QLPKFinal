@@ -92,7 +92,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-
+                throw e;
             }
             finally
             {
@@ -106,7 +106,6 @@ namespace DAL
         {
             try
             {
-                // Ket noi
                 _conn.Open();
                 string cm = "Delete NhanVien where ID =@id";
                 SqlCommand cmd = new SqlCommand(cm, _conn);
